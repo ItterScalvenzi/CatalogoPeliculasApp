@@ -15,7 +15,7 @@ public class ServicioPeliculaLista implements IServicioPeliculas {
 
 	@Override
 	public void listarPeliculas() {
-		System.out.println("\t***** Listado de Peliculas***");
+		System.out.println("\n\t***** Listado de Peliculas*** \n");
 		peliculas.forEach(System.out::println);
 	}
 
@@ -28,11 +28,12 @@ public class ServicioPeliculaLista implements IServicioPeliculas {
 	@Override
 	public void buscarPelicula(Pelicula pelicula) {
 		int indice = peliculas.indexOf(pelicula);
+		System.out.println("\nBuscando pelicula...");
 		if(indice != -1) {
-			System.out.println("La pelicula " +pelicula.getNombre()+ " se encuentra "
+			System.out.println("La pelicula \"" +pelicula.getNombre()+ "\" se encuentra "
 					+ "en el indice " +indice);
 		} else {
-			System.out.println("No se encontró la pelicula " +pelicula.getNombre());
+			System.out.println("No se encontró la pelicula \"" +pelicula.getNombre()+ "\"");
 		}
 		
 	}
