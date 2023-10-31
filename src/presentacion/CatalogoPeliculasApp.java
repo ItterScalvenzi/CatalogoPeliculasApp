@@ -1,8 +1,10 @@
-package servicio;
+package presentacion;
 
 import dominio.Pelicula;
+import servicio.IServicioPeliculas;
+import servicio.ServicioPeliculaLista;
 
-public class TestMain {
+public class CatalogoPeliculasApp {
 
 	public static void main(String[] args) {
 		Pelicula pelicula1 = new Pelicula("Batman Inicia",
