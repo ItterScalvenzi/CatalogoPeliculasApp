@@ -26,16 +26,22 @@ public class ServicioPeliculaLista implements IServicioPeliculas {
 	}
 
 	@Override
-	public void buscarPelicula(Pelicula pelicula) {
-		int indice = peliculas.indexOf(pelicula);
-		System.out.println("\nBuscando pelicula...");
-		if(indice != -1) {
-			System.out.println("La pelicula \"" +pelicula.getNombre()+ "\" se encuentra "
-					+ "en el indice " +indice);
-		} else {
-			System.out.println("No se encontró la pelicula \"" +pelicula.getNombre()+ "\"");
-		}
+	public void buscarPelicula(String nombre) {
+		boolean encontrada = false;
 		
+		for(Pelicula pelicula : peliculas) {
+			if (pelicula.getNombre().equalsIgnoreCase(nombre)) {
+				int indice = peliculas.indexOf(pelicula);
+				System.out.println("\nBuscando pelicula...");
+				System.out.println("La pelicula \"" +pelicula.getNombre()+ "\" se encuentra "
+							+ "en el indice " +indice);
+				encontrada = true;
+			}
+		}
+			if(!encontrada) {
+				System.out.println("No se encontró la pelicula \"" +nombre+ "\"");
+			}
+				
 	}
 
 }

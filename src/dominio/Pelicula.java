@@ -42,7 +42,7 @@ public class Pelicula {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(anio, nombre);
+		return Objects.hash(nombre);
 	}
 
 	@Override
@@ -54,8 +54,10 @@ public class Pelicula {
 		if (getClass() != obj.getClass())
 			return false;
 		Pelicula other = (Pelicula) obj;
-		return Objects.equals(anio, other.anio) && Objects.equals(nombre, other.nombre);
+		return Objects.equals(nombre, other.nombre);
 	}
+	
+	
 
 	@Override
 	public String toString() {
