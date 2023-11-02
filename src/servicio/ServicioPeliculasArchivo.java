@@ -55,6 +55,7 @@ public class ServicioPeliculasArchivo implements IServicioPeliculas{
 						descripcion = linea;
 						Pelicula pelicula = new Pelicula(nombre, anio, descripcion);
 						System.out.println(pelicula);
+						//reiniciar los valores para la proxima pelicula
 						nombre = null;
 						anio = null;
 						descripcion = null;
@@ -65,7 +66,6 @@ public class ServicioPeliculasArchivo implements IServicioPeliculas{
 		} catch (Exception e) {
 			System.out.println("Ocurrío un error al leer el archivo: " +e.getMessage());
 		}
-		
 	}
 
 	@Override
@@ -103,7 +103,9 @@ public class ServicioPeliculasArchivo implements IServicioPeliculas{
 			//valor nulo y en cada ciclo le asignamos la linea correspondiente.
 			//De esa forma nos aseguramos que compara solamente con la linea del nombre
 			while(lineaTexto != null) {
-				if(nombre == null) {
+				if(nombre == null) { 
+					 //si nombre == null significa que esta en la linea del nombre
+					 // y le asignamos la linea
 					nombre = lineaTexto;
 				} else if(anio == null) {
 					anio = lineaTexto;
@@ -113,7 +115,7 @@ public class ServicioPeliculasArchivo implements IServicioPeliculas{
 							encontrada = true;
 							break;
 						}
-						
+						//Reiniciar para la proxima pelicula
 						nombre = null;
 						anio = null;
 						descripcion = null;
@@ -134,7 +136,5 @@ public class ServicioPeliculasArchivo implements IServicioPeliculas{
 		} catch(Exception e) {
 			System.out.println("Ocurrió un error al buscar en el archivo: " +e.getMessage());
 		}
-		
 	}
-
 }

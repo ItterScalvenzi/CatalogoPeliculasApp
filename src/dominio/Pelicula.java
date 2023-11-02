@@ -63,9 +63,4 @@ public class Pelicula {
 	public String toString() {
 		return nombre +"\n"+ anio +"\n"+ descripcion;
 	}
-
-	public static void main(String[] args) {
-		var pelicula1 = new Pelicula("Batman", "1990", "Batman se enfrenta a el Joker");
-		System.out.println(pelicula1);
-	}
 }

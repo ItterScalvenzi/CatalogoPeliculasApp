@@ -40,8 +40,6 @@ public class ServicioPeliculaLista implements IServicioPeliculas {
 		}
 			if(!encontrada) {
 				System.out.println("No se encontró la pelicula \"" +nombre+ "\"");
-			}
-				
+			}		
 	}
-
 }
