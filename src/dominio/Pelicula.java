@@ -61,7 +61,7 @@ public class Pelicula {
 
 	@Override
 	public String toString() {
-		return "Pelicula [ \n\t Nombre= " + nombre + ",\n\t Año= " + anio + ",\n\t Descripcion= " + descripcion + "]";
+		return nombre +"\n"+ anio +"\n"+ descripcion;
 	}
 
 	public static void main(String[] args) {
