@@ -5,6 +5,7 @@ import java.util.Scanner;
 import dominio.Pelicula;
 import servicio.IServicioPeliculas;
 import servicio.ServicioPeliculaLista;
+import servicio.ServicioPeliculasArchivo;
 
 public class CatalogoPeliculasApp {
 
@@ -13,7 +14,8 @@ public class CatalogoPeliculasApp {
 		
 		var salir = false;
 		
-		IServicioPeliculas servicioPeliculas = new ServicioPeliculaLista();
+		//IServicioPeliculas servicioPeliculas = new ServicioPeliculaLista();
+		IServicioPeliculas servicioPeliculas = new ServicioPeliculasArchivo();
 		
 		while(!salir) {
 			try {
